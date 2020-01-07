@@ -17,7 +17,7 @@ namespace SchoolTemplate.Controllers
     {
       List<Product> products = new List<Product>();
       // uncomment deze regel om producten uit je database toe te voegen
-       // products = GetProducts();
+      products = GetProducts();
 
       return View(products);
     }
