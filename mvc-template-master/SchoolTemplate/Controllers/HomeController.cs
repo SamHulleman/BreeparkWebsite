@@ -52,7 +52,7 @@ namespace SchoolTemplate.Controllers
       return products;
     }
 
-    public IActionResult Privacy()
+    public IActionResult Contact()
     {
       return View();
     }
@@ -61,6 +61,11 @@ namespace SchoolTemplate.Controllers
     {
         return View();
     }
+
+   public IActionResult Tickets()
+        {
+            return View();
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
