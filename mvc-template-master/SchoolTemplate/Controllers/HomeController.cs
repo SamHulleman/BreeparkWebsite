@@ -13,7 +13,8 @@ namespace SchoolTemplate.Controllers
     // zorg ervoor dat je hier je gebruikersnaam (leerlingnummer) en wachtwoord invult
     string connectionString = "Server=172.16.160.21;Port=3306;Database=109807;Uid=109807;Pwd=rfultyRa;";
 
-    public IActionResult Index()
+   
+        public IActionResult Index()
     {
       List<Product> products = new List<Product>();
       // uncomment deze regel om producten uit je database toe te voegen
@@ -51,18 +52,18 @@ namespace SchoolTemplate.Controllers
 
       return products;
     }
-
+        [Route ("Contact")]
     public IActionResult Contact()
     {
       return View();
     }
-
-    public IActionResult Agenda()
+        [Route("Agenda")]
+        public IActionResult Agenda()
     {
         return View();
     }
-
-   public IActionResult Tickets()
+        [Route("Tickets")]
+        public IActionResult Tickets()
         {
             return View();
         }
