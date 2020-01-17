@@ -4,11 +4,11 @@ nav ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: #40E0D0;
 }
 
 nav li {
-    float: left;
+    float: right;
 }
 
     nav li a {
@@ -23,5 +23,13 @@ nav li {
         li a:hover {
             background-color: #111;
         }
+
+
+img {
+    width: 1000px;
+    height: 600px;
+    padding-left: 300px;
+}
+
 
 
