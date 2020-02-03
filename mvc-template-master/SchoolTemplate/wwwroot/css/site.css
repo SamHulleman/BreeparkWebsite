@@ -5,6 +5,7 @@ nav ul {
     padding: 0;
     overflow: hidden;
     background-color: #40E0D0;
+    height: 80px;
 }
 
 nav li {
@@ -16,7 +17,7 @@ nav li {
         display: block;
         color: white;
         text-align: center;
-        padding: 14px 16px;
+        padding: 80px 16px;
         text-decoration: none;
         text-align: center;
         padding-top: 30px
