@@ -35,10 +35,9 @@ h5 {
 img {
     width: 1000px;
     height: 500px;
-    padding-left: 300px;
+    padding-left: 150px;
+    padding-right: 50px;
 }
-
-
 .logo-image {
     width: 46px;
     height: 46px;
