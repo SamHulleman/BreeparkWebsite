@@ -1,13 +1,15 @@
 ﻿@using SchoolTemplate.Database;
 @model List<Product>
 @{
-  ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home Page";
 }
 
-    <div class="text-center">
-        <h1 class="display-4">Welkom bij Breeparkje</h1>
 
-        <img src="https://www.thisisourhouse.nl/wp-content/uploads/2015/12/IntentsFestival2015.jpg">
+    <div class="Home-pagina">
+        <h1> Welkom bij Breeparkje</h1>
+
+        <img src="https://www.thisisourhouse.nl/wp-content/uploads/2015/12/IntentsFestival2015.jpg" />
+        <h5> Voor al uw festivals & evenementen </h5>
 
         <ul>
             @foreach (Product p in Model)

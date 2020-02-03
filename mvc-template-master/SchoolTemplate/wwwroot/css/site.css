@@ -24,10 +24,17 @@ nav li {
             background-color: #111;
         }
 
-
+h1 {
+    text-align: center;
+    font-size: 50px;
+}
+h5 {
+    text-align: center;
+    font-size: 30px;
+}
 img {
     width: 1000px;
-    height: 600px;
+    height: 500px;
     padding-left: 300px;
 }
 
