@@ -8,7 +8,8 @@ nav ul {
 }
 
 nav li {
-    float: right;
+    float: right; 
+    text-align: center;
 }
 
     nav li a {
@@ -17,6 +18,8 @@ nav li {
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
+        text-align: center;
+        padding-top: 30px
     }
 
         /* Change the link color to #111 (black) on hover */
@@ -33,15 +36,14 @@ h5 {
     font-size: 30px;
 }
 .home-img {
-    width: 1000px;
+    width: 800px;
     height: 500px;
-    padding-left: 300px;
+    padding-left: 250px;
 }
 
 
-.logo-image {
+.logo-image img{
     float: left;
-    width: 10px;
-    height: 10px;
-    
+    width: 120px;
+    height: 80px;   
 }
