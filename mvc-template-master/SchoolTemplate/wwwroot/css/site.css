@@ -47,3 +47,12 @@ h5 {
     width: 120px;
     height: 80px;   
 }
+.contact-pagina {
+    background-color: lightyellow;
+    height: 200px;
+    float: right;
+    width: 500px;
+    padding: 50px;
+    margin: 200px;
+    font-size: 25px;
+}
