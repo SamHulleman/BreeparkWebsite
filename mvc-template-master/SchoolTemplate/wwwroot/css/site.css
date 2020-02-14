@@ -49,20 +49,19 @@ h5 {
     width: 120px;
     height: 80px;   
 }
-.contact-pagina {
-    background-color: navajowhite;
-    height: 200px;
-    float: right;
-    width: 500px;
-    padding: 50px;
-    margin: 150px;
-    font-size: 25px;
+.contact-image {
+    width: 49vw;
+    box-sizing: border-box;
 }
 .contact-image img {
-    float: left;
-    height: 300px;
-    width: 300px;
-    padding-left: 125px;
-    padding-top: 30px;
-    margin: 100px;
+   width:80%;
+}
+
+.contact-pagina {
+    background-color: navajowhite;
+    float: right;
+    width: 49vw;
+    padding: 50px;
+    font-size: 25px;
+    box-sizing: border-box;
 }
