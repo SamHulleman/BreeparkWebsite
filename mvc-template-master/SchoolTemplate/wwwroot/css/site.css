@@ -1,15 +1,13 @@
 ﻿
 nav ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
     overflow: hidden;
     background-color: #40E0D0;
     height: 80px;
 }
 
 nav li {
-    float: right; 
+    float: right;
     text-align: center;
 }
 
@@ -24,19 +22,21 @@ nav li {
         transition: background-color 1s;
     }
 
-        /* Change the link color to #111 (black) on hover */
-        li a:hover {
-            background-color: #111;
-        }
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #111;
+}
 
 h1 {
     text-align: center;
     font-size: 50px;
 }
+
 h5 {
     text-align: center;
     font-size: 30px;
 }
+
 .home-img {
     width: 800px;
     height: 500px;
@@ -44,17 +44,10 @@ h5 {
 }
 
 
-.logo-image img{
+.logo-image img {
     float: left;
     width: 120px;
-    height: 80px;   
-}
-.contact-image {
-    width: 49vw;
-    box-sizing: border-box;
-}
-.contact-image img {
-   width:80%;
+    height: 80px;
 }
 
 .contact-pagina {
@@ -65,15 +58,17 @@ h5 {
     font-size: 25px;
     box-sizing: border-box;
 }
+.maps{
 
+}
 .box {
     float: left;
-    width: 33.33%;
+    width: 26vw;
     padding: 50px;
+    background-color: #40E0D0;
+    border-style: solid;
+    border-color: black;
+    text-align: center;
+    margin-top: 25px;
 }
 
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
-}
