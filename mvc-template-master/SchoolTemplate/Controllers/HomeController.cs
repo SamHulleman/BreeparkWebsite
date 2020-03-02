@@ -17,7 +17,7 @@ namespace SchoolTemplate.Controllers
         public IActionResult Index()
         {     
 
-            return View(GetFestival());
+            return View(GetFestivals());
         }      
 
         [Route("Contact")]
@@ -28,7 +28,7 @@ namespace SchoolTemplate.Controllers
         [Route("Agenda")]
         public IActionResult Agenda()
         {
-            return View();
+            return View(GetFestivals());
         }
         [Route("Tickets")]
         public IActionResult Tickets()
@@ -42,7 +42,7 @@ namespace SchoolTemplate.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }    
 
-        private List<Festival> GetFestival()
+        private List<Festival> GetFestivals()
         {
             List<Festival> festivals = new List<Festival>();
 

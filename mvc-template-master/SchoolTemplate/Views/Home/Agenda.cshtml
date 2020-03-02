@@ -1,4 +1,19 @@
-﻿
+﻿@using SchoolTemplate.Database;
+@model List<Festival>
+@{
+    ViewData["Title"] = "Agenda";
+}
+
 <h1>Agenda</h1>
 
 
+<ul>
+    @if(Model != null){ 
+        foreach (Festival festival in Model)
+        {
+            <li>
+                @festival.naam @festival.beschrijving @festival.prijs
+            </li>
+        }
+    }
+</ul>
