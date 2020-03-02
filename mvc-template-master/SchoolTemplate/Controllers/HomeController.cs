@@ -30,6 +30,7 @@ namespace SchoolTemplate.Controllers
         {
             return View(GetFestivals());
         }
+
         [Route("Tickets")]
         public IActionResult Tickets()
         {
@@ -60,7 +61,7 @@ namespace SchoolTemplate.Controllers
                             id = Convert.ToInt32(reader["Id"]),
                             naam = reader["Naam"].ToString(),
                             beschrijving = reader["beschrijving"].ToString(),
-                            datum = reader["datum"].ToString(),
+                            datum = DateTimeOffset.Parse(reader["datum"].ToString()),
                             tijd = reader["tijd"].ToString(),
                             prijs = reader["prijs"].ToString()
                         };

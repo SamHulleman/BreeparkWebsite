@@ -8,12 +8,14 @@
 
 
 <ul>
-    @if(Model != null){ 
+    @if (Model != null)
+    {
         foreach (Festival festival in Model)
         {
             <li>
-                @festival.naam @festival.beschrijving @festival.prijs
+                <a href="/festival/@festival.id">@festival.naam @festival.beschrijving @festival.datum.ToString("D") @festival.tijd @festival.prijs </a>
             </li>
         }
     }
 </ul>
+

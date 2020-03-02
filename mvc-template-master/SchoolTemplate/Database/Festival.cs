@@ -10,7 +10,7 @@ namespace SchoolTemplate.Database
 
         public string beschrijving { get; set; }
 
-        public string datum { get; set; }
+        public DateTimeOffset datum { get; set; }
         public string tijd { get; set; }
 
         public string prijs { get; set; }
