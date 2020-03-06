@@ -72,8 +72,9 @@ namespace SchoolTemplate.Controllers
                             Datum = DateTimeOffset.Parse(reader["datum"].ToString()),
                             Tijd = reader["tijd"].ToString(),
                             Prijs = reader["prijs"].ToString(),
-                            Beschikbaarheid = reader["Beschikbaarheid"].ToString();
-                    };
+                            Beschikbaarheid = reader["Beschikbaarheid"].ToString()
+                        };
+                    
                         festivals.Add(f);
                     }
                 }
@@ -103,7 +104,8 @@ namespace SchoolTemplate.Controllers
                             Datum = DateTimeOffset.Parse(reader["datum"].ToString()),
                             Tijd = reader["tijd"].ToString(),
                             Prijs = reader["Prijs"].ToString(),
-                            Beschikbaarheid = reader["Beschikbaarheid"].ToString();
+                            Beschikbaarheid = reader["Beschikbaarheid"].ToString()
+                        };
                         festivals.Add(f);
                     }
                 }
