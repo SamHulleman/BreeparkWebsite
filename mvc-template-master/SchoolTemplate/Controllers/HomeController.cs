@@ -18,7 +18,15 @@ namespace SchoolTemplate.Controllers
         {     
 
             return View(GetFestivals());
-        }      
+        }
+
+
+        [Route("festival/{id}")]
+        public IActionResult Festival(string id)
+        {
+            var model = GetFestival(id);
+            return View(model);
+        }
 
         [Route("Contact")]
         public IActionResult Contact()
@@ -58,19 +66,50 @@ namespace SchoolTemplate.Controllers
                     {
                         Festival f = new Festival
                         {
-                            id = Convert.ToInt32(reader["Id"]),
-                            naam = reader["Naam"].ToString(),
-                            beschrijving = reader["beschrijving"].ToString(),
-                            datum = DateTimeOffset.Parse(reader["datum"].ToString()),
-                            tijd = reader["tijd"].ToString(),
-                            prijs = reader["prijs"].ToString()
-                        };
+                            Id = Convert.ToInt32(reader["Id"]),
+                            Naam = reader["Naam"].ToString(),
+                            Beschrijving = reader["beschrijving"].ToString(),
+                            Datum = DateTimeOffset.Parse(reader["datum"].ToString()),
+                            Tijd = reader["tijd"].ToString(),
+                            Prijs = reader["prijs"].ToString(),
+                            Beschikbaarheid = reader["Beschikbaarheid"].ToString();
+                    };
                         festivals.Add(f);
                     }
                 }
             }
 
             return festivals;
+        }
+
+        private Festival GetFestival(string id)
+        {
+            List<Festival> festivals = new List<Festival>();
+
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand($"select * from festival where id = {id}", conn);
+
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Festival f = new Festival
+                        {
+                            Id = Convert.ToInt32(reader["Id"]),
+                            Naam = reader["Naam"].ToString(),
+                            Beschrijving = reader["beschrijving"].ToString(),
+                            Datum = DateTimeOffset.Parse(reader["datum"].ToString()),
+                            Tijd = reader["tijd"].ToString(),
+                            Prijs = reader["Prijs"].ToString(),
+                            Beschikbaarheid = reader["Beschikbaarheid"].ToString();
+                        festivals.Add(f);
+                    }
+                }
+            }
+
+            return festivals[0];
         }
     }
 }
