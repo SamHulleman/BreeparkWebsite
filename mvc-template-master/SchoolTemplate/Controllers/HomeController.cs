@@ -21,7 +21,7 @@ namespace SchoolTemplate.Controllers
         }
 
 
-        [Route("festival/{id}")]
+        [Route("festival/{Id}")]
         public IActionResult Festival(string id)
         {
             var model = GetFestival(id);
@@ -68,10 +68,10 @@ namespace SchoolTemplate.Controllers
                         {
                             Id = Convert.ToInt32(reader["Id"]),
                             Naam = reader["Naam"].ToString(),
-                            Beschrijving = reader["beschrijving"].ToString(),
-                            Datum = DateTimeOffset.Parse(reader["datum"].ToString()),
-                            Tijd = reader["tijd"].ToString(),
-                            Prijs = reader["prijs"].ToString(),
+                            Beschrijving = reader["Beschrijving"].ToString(),
+                            Datum = DateTimeOffset.Parse(reader["Datum"].ToString()),
+                            Tijd = reader["Tijd"].ToString(),
+                            Prijs = reader["Prijs"].ToString(),
                             Beschikbaarheid = reader["Beschikbaarheid"].ToString()
                         };
                     
@@ -100,9 +100,9 @@ namespace SchoolTemplate.Controllers
                         {
                             Id = Convert.ToInt32(reader["Id"]),
                             Naam = reader["Naam"].ToString(),
-                            Beschrijving = reader["beschrijving"].ToString(),
-                            Datum = DateTimeOffset.Parse(reader["datum"].ToString()),
-                            Tijd = reader["tijd"].ToString(),
+                            Beschrijving = reader["Beschrijving"].ToString(),
+                            Datum = DateTimeOffset.Parse(reader["Datum"].ToString()),
+                            Tijd = reader["Tijd"].ToString(),
                             Prijs = reader["Prijs"].ToString(),
                             Beschikbaarheid = reader["Beschikbaarheid"].ToString()
                         };
