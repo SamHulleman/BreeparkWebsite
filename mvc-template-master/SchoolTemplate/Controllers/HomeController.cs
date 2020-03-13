@@ -69,10 +69,9 @@ namespace SchoolTemplate.Controllers
                             Id = Convert.ToInt32(reader["Id"]),
                             Naam = reader["Naam"].ToString(),
                             Beschrijving = reader["Beschrijving"].ToString(),
-                            Datum = DateTimeOffset.Parse(reader["Datum"].ToString()),
-                            Tijd = reader["Tijd"].ToString(),
+                           
                             Prijs = reader["Prijs"].ToString(),
-                            Beschikbaarheid = reader["Beschikbaarheid"].ToString()
+                    
                         };
                     
                         festivals.Add(f);
@@ -101,10 +100,9 @@ namespace SchoolTemplate.Controllers
                             Id = Convert.ToInt32(reader["Id"]),
                             Naam = reader["Naam"].ToString(),
                             Beschrijving = reader["Beschrijving"].ToString(),
-                            Datum = DateTimeOffset.Parse(reader["Datum"].ToString()),
-                            Tijd = reader["Tijd"].ToString(),
+                            
                             Prijs = reader["Prijs"].ToString(),
-                            Beschikbaarheid = reader["Beschikbaarheid"].ToString()
+                            
                         };
                         festivals.Add(f);
                     }
