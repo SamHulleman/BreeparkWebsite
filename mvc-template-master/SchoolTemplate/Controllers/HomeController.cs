@@ -33,6 +33,12 @@ namespace SchoolTemplate.Controllers
         {
             return View();
         }
+        [Route("Contact")]
+        [HttpPost]
+        public IActionResult Contact(PersonModel model)
+        {
+            return View(model);
+        }
         [Route("Agenda")]
         public IActionResult Agenda()
         {

@@ -1,4 +1,8 @@
-﻿<h1>Contact</h1>
+﻿@model PersonModel
+@{
+    ViewData["Title"] = "Contact";
+}
+<h1>Contact</h1>
 <div class="contact-pagina">
     <p> Bavelseparklaan, 4817 ZX Breda</p>
     <p> algemene vragen: 076-763 046 </p>
@@ -11,7 +15,25 @@
 
 </div>
 
+@if (Model != null)
+{
+    <p>
+        Je voornaam is : @Model.Voornaam <br />
+        Je achternaam is : @Model.Achternaam  <br />
+    </p>
+}
+<div class="contact-form">
+<form method="post">
+    <input type="text" name=" voornaam" placeholder="Voornaam" />
+    <input type="text" name=" achternaam" placeholder="Achternaam" />
+    @Html.ValidationMessageFor(m => m.Achternaam) <br />
+    <input type="text" name=" email" placeholder="E-mail" />
+    @Html.ValidationMessageFor(m => m.Email) <br />
+    <input type="datetime" name=" geboortedatum" placeholder="Geboortedatum"/>
+    <input type="submit" value="verstuur" />
 
+</form>
+    </div> 
 
 <div class="box">
     <h3> Instagram </h3>

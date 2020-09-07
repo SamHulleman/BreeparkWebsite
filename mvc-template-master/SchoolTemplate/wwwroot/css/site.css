@@ -63,7 +63,7 @@ h5 {
 }
 .box {
     float: left;
-    width: 26vw;
+    width: 20vw;
     padding: 50px;
     background-color: #40E0D0;
     border-style: solid;
@@ -71,4 +71,6 @@ h5 {
     text-align: center;
     margin-top: 25px;
 }
+.contact-form {
 
+}
