@@ -50,20 +50,28 @@ h5 {
     height: 80px;
 }
 
+.maps {
+    float: left; 
+    width: 30vw; 
+}
+.contact-form {
+    width: 30vw; 
+   
+}
 .contact-pagina {
-    background-color: navajowhite;
+    background-color: #40E0D0;
     float: right;
-    width: 49vw;
+    width: 35vw;
     padding: 50px;
     font-size: 25px;
     box-sizing: border-box;
 }
-.maps{
 
-}
+
+
 .box {
     float: left;
-    width: 20vw;
+    width: 26vw;
     padding: 50px;
     background-color: #40E0D0;
     border-style: solid;
@@ -71,6 +79,14 @@ h5 {
     text-align: center;
     margin-top: 25px;
 }
-.contact-form {
 
+.box-agenda {
+    float: left;
+    width: 100%;
+    padding: 50px;
+    background-color: #40E0D0;
+    border-style: solid;
+    border-color: black;
+    text-align: left;
+    margin-top: 25px;
 }

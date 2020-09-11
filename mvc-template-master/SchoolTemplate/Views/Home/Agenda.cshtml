@@ -7,15 +7,21 @@
 <h1>Agenda</h1>
 
 
-<ul>
+
     @if (Model != null)
     {
         foreach (Festival festival in Model)
         {
-            <li>
+
+            <div class="box-agenda">
                 <a href="/festival/@festival.Id">@festival.Naam </a>
-            </li>
+            </div>
+
+
+
+
+
         }
     }
-</ul>
+
 
