@@ -2,6 +2,7 @@
 @model Festival
 @{
     ViewData["Title"] = "Festival";
+    List<FestivalDag> festivalDagen = ViewData["festivaldagen"] as List<FestivalDag>;
 }
 
 <h1>@Model.Naam</h1>
@@ -10,3 +11,14 @@
     @Model.Beschrijving
     €  @Model.Prijs
 </p>
+
+<h3>Alle dagen:</h3>
+@foreach(FestivalDag f in festivalDagen)
+{
+<p>
+    @f.Start
+</p>
+<p>
+    @f.Eind
+</p>
+}

@@ -25,6 +25,9 @@ namespace SchoolTemplate.Controllers
         public IActionResult Festival(string id)
         {
             var model = GetFestival(id);
+            var Festivaldagen = GetFestivalDag(id);
+            ViewData["festivaldagen"] = Festivaldagen;
+
             return View(model);
         }
 
@@ -87,7 +90,6 @@ namespace SchoolTemplate.Controllers
 
             return festivals;
         }
-
         private Festival GetFestival(string id)
         {
             List<Festival> festivals = new List<Festival>();
@@ -117,5 +119,37 @@ namespace SchoolTemplate.Controllers
 
             return festivals[0];
         }
+        private List<FestivalDag> GetFestivalDag(string festivalId)
+        {
+            List<FestivalDag> festivals = new List<FestivalDag>();
+
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand($"select * from festival_dag where festival_id = {festivalId}", conn);
+
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        FestivalDag f = new FestivalDag
+                        {
+                            Id = Convert.ToInt32(reader["Id"]),
+                            Festival_id = Convert.ToInt32(reader["Festival_id"]),
+                            Datum = DateTime.Parse(reader["Datum"].ToString()),
+                            Start = reader["Start"].ToString(),
+                            Eind = reader["Eind"].ToString(),
+                            Voorraad = Convert.ToInt32(reader["Voorraad"]),
+
+                        };
+                        festivals.Add(f);
+                    }
+                }
+            }
+
+            return festivals;
+        }
     }
-}
+      
+    }
+

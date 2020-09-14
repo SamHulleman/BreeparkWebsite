@@ -85,8 +85,13 @@ h5 {
     width: 100%;
     padding: 50px;
     background-color: #40E0D0;
-    border-style: solid;
-    border-color: black;
     text-align: left;
     margin-top: 25px;
+    
 }
+    .box-agenda a {
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 25px;
+    }
