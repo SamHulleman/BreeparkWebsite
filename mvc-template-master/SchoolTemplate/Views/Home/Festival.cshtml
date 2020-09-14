@@ -12,13 +12,12 @@
     €  @Model.Prijs
 </p>
 
-<h3>Alle dagen:</h3>
+
 @foreach(FestivalDag f in festivalDagen)
 {
+    <p> @f.Datum.ToString("d") </p>
 <p>
-    @f.Start
+    @f.Start - @f.Eind 
 </p>
-<p>
-    @f.Eind
-</p>
+
 }
