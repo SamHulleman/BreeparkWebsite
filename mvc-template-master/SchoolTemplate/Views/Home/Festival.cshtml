@@ -7,12 +7,6 @@
 
 <h1>@Model.Naam</h1>
 
-<p>
-    @Model.Beschrijving
-    €  @Model.Prijs
-</p>
-
-
 @foreach(FestivalDag f in festivalDagen)
 {
     <p> @f.Datum.ToString("d") </p>
@@ -21,3 +15,9 @@
 </p>
 
 }
+<p>
+    @Model.Beschrijving
+   
+</p>
+<p>  €  @Model.Prijs
+    </p>
