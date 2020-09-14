@@ -15,7 +15,7 @@ namespace SchoolTemplate.Controllers
 
 
         public IActionResult Index()
-        {     
+        {
 
             return View(GetFestivals());
         }
@@ -40,8 +40,28 @@ namespace SchoolTemplate.Controllers
         [HttpPost]
         public IActionResult Contact(PersonModel model)
         {
-            return View(model);
+            if (!ModelState.IsValid)
+                return View(model);
+
+            SavePerson(model);
+
+            return Redirect("/gelukt");
         }
+        private void SavePerson(PersonModel person)
+        {
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand("INSERT INTO klant(naam,achternaam, geboortedatum, e-mailadres) VALUEs(?voornaam,?achternaam,?e-mail,?geboortedatum)", conn);
+                cmd.Parameters.Add("?voornaam", MySqlDbType.VarChar).Value = person.Voornaam;
+                cmd.Parameters.Add("?achternaam", MySqlDbType.VarChar).Value = person.Achternaam;
+                cmd.Parameters.Add("?e-mail", MySqlDbType.VarChar).Value = person.Email;
+                cmd.Parameters.Add("?geboortedatum", MySqlDbType.Date).Value = person.Geboortedatum;
+                cmd.ExecuteNonQuery();
+            }
+
+        }
+
         [Route("Agenda")]
         public IActionResult Agenda()
         {
