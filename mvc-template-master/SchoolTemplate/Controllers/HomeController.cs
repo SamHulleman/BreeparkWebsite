@@ -38,14 +38,14 @@ namespace SchoolTemplate.Controllers
         }
         [Route("Contact")]
         [HttpPost]
-        public IActionResult Contact(PersonModel model)
-        {
+        public IActionResult Contact(PersonModel model, string voornaam)
+       {
             if (!ModelState.IsValid)
                 return View(model);
 
             SavePerson(model);
 
-            return Redirect("/gelukt");
+            return Redirect(/Gelukt.cshtml);
         }
         private void SavePerson(PersonModel person)
         {

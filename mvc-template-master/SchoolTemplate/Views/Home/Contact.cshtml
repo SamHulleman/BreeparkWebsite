@@ -17,19 +17,16 @@
 
 @if (Model != null)
 {
-    <p>
-        Je voornaam is : @Model.Voornaam <br />
-        Je achternaam is : @Model.Achternaam  <br />
-    </p>
+
 }
 <div class="contact-form">
     <form method="post">
-        <input type="text" name=" voornaam" placeholder="Voornaam" /> <br />
-        <input type="text" name=" achternaam" placeholder="Achternaam" /> 
+        <input type="text" name="Voornaam" placeholder="Voornaam" /> <br />
+        <input type="text" name="Achternaam" placeholder="Achternaam" /> 
         @Html.ValidationMessageFor(m => m.Achternaam) <br />
-        <input type="text" name=" email" placeholder="E-mail" /> 
+        <input type="text" name="Email" placeholder="E-mail" /> 
         @Html.ValidationMessageFor(m => m.Email) <br />
-        <input type="datetime" name=" geboortedatum" placeholder="Geboortedatum" /> <br />
+        <input type="datetime" name="Geboortedatum" placeholder="Geboortedatum" /> <br />
         <input type="submit" value="verstuur" />
 
     </form>
