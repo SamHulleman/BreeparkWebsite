@@ -45,17 +45,17 @@ namespace SchoolTemplate.Controllers
 
             SavePerson(model);
 
-            return Redirect(/Gelukt.cshtml);
+            return Redirect("/gelukt");
         }
         private void SavePerson(PersonModel person)
         {
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
-                MySqlCommand cmd = new MySqlCommand("INSERT INTO klant(naam,achternaam, geboortedatum, e-mailadres) VALUEs(?voornaam,?achternaam,?e-mail,?geboortedatum)", conn);
+                MySqlCommand cmd = new MySqlCommand("INSERT INTO klant(naam,achternaam, geboortedatum, emailadres) VALUEs(?voornaam,?achternaam,?email,?geboortedatum)", conn);
                 cmd.Parameters.Add("?voornaam", MySqlDbType.VarChar).Value = person.Voornaam;
                 cmd.Parameters.Add("?achternaam", MySqlDbType.VarChar).Value = person.Achternaam;
-                cmd.Parameters.Add("?e-mail", MySqlDbType.VarChar).Value = person.Email;
+                cmd.Parameters.Add("?email", MySqlDbType.VarChar).Value = person.Email;
                 cmd.Parameters.Add("?geboortedatum", MySqlDbType.Date).Value = person.Geboortedatum;
                 cmd.ExecuteNonQuery();
             }
