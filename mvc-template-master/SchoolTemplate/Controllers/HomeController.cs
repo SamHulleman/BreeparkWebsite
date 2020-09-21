@@ -38,24 +38,24 @@ namespace SchoolTemplate.Controllers
         }
         [Route("Contact")]
         [HttpPost]
-        public IActionResult Contact(PersonModel model, string voornaam)
+        public IActionResult Contact(PersonModel model)
        {
             if (!ModelState.IsValid)
                 return View(model);
 
             SavePerson(model);
 
-            return Redirect("/gelukt");
+            return View("/gelukt");
         }
         private void SavePerson(PersonModel person)
         {
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
-                MySqlCommand cmd = new MySqlCommand("INSERT INTO klant(naam,achternaam, geboortedatum, emailadres) VALUEs(?voornaam,?achternaam,?email,?geboortedatum)", conn);
+                MySqlCommand cmd = new MySqlCommand("INSERT INTO klant(naam,achternaam,emailadres,geboortedatum) VALUEs(?voornaam,?achternaam,?emailadres,?geboortedatum)", conn);
                 cmd.Parameters.Add("?voornaam", MySqlDbType.VarChar).Value = person.Voornaam;
                 cmd.Parameters.Add("?achternaam", MySqlDbType.VarChar).Value = person.Achternaam;
-                cmd.Parameters.Add("?email", MySqlDbType.VarChar).Value = person.Email;
+                cmd.Parameters.Add("?emailadres", MySqlDbType.VarChar).Value = person.Email;
                 cmd.Parameters.Add("?geboortedatum", MySqlDbType.Date).Value = person.Geboortedatum;
                 cmd.ExecuteNonQuery();
             }

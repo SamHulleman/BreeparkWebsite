@@ -19,21 +19,6 @@
 {
 
 }
-<div class="contact-form">
-    <form method="post">
-        <input type="text" name="Voornaam" placeholder="Voornaam" /> <br />
-        <input type="text" name="Achternaam" placeholder="Achternaam" /> 
-        @Html.ValidationMessageFor(m => m.Achternaam) <br />
-        <input type="text" name="Email" placeholder="E-mail" /> 
-        @Html.ValidationMessageFor(m => m.Email) <br />
-        <input type="datetime" name="Geboortedatum" placeholder="Geboortedatum" /> <br />
-        <input type="submit" value="verstuur" />
-
-    </form>
-</div>
-
-
-
 
 <div class="box">
     <h3> Instagram </h3>
@@ -46,6 +31,22 @@
 <div class="box">
     <h3> Twitter </h3>
     <p> @@Breeparkfestivals</p>
+</div>
+
+
+
+<div class="contact-form">
+    <form method="post">
+        <input type="text" name="Voornaam" placeholder="Voornaam" /> <br />
+        <input type="text" name="Achternaam" placeholder="Achternaam" />
+        @Html.ValidationMessageFor(m => m.Achternaam) <br />
+        <input type="text" name="Email" placeholder="Emailadres" />
+        @Html.ValidationMessageFor(m => m.Email) <br />
+        <input type="datetime" name="Geboortedatum" placeholder="Geboortedatum" /> <br />
+        <input type="submit" value="verstuur" />
+        <a href="/gelukt"</a>
+    </form>
+
 </div>
 
 
