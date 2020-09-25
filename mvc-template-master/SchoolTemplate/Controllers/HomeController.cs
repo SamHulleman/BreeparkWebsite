@@ -16,7 +16,6 @@ namespace SchoolTemplate.Controllers
 
         public IActionResult Index()
         {
-
             return View(GetFestivals());
         }
 
@@ -31,10 +30,19 @@ namespace SchoolTemplate.Controllers
             return View(model);
         }
 
+
+        [Route("gelukt")]
+        public IActionResult Gelukt()
+        {
+            return View();
+        }
+
+
         [Route("Contact")]
         public IActionResult Contact()
         {
             return View();
+
         }
         [Route("Contact")]
         [HttpPost]
@@ -45,7 +53,7 @@ namespace SchoolTemplate.Controllers
 
             SavePerson(model);
 
-            return View("/gelukt");
+            return Redirect("/gelukt");
         }
         private void SavePerson(PersonModel person)
         {
@@ -59,7 +67,6 @@ namespace SchoolTemplate.Controllers
                 cmd.Parameters.Add("?geboortedatum", MySqlDbType.Date).Value = person.Geboortedatum;
                 cmd.ExecuteNonQuery();
             }
-
         }
 
         [Route("Agenda")]
