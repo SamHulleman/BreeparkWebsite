@@ -98,9 +98,9 @@ namespace SchoolTemplate.Controllers
                             Id = Convert.ToInt32(reader["Id"]),
                             Naam = reader["Naam"].ToString(),
                             Beschrijving = reader["Beschrijving"].ToString(),
-                           
                             Prijs = reader["Prijs"].ToString(),
-                    
+                            Afbeelding = reader["Afbeelding"].ToString(),
+
                         };
                     
                         festivals.Add(f);
