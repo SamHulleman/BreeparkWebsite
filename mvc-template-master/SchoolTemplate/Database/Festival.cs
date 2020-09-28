@@ -16,7 +16,6 @@ namespace SchoolTemplate.Database
         public string Prijs { get; set; }
 
         public string Beschikbaarheid { get; set; }
-
     }
 }
 

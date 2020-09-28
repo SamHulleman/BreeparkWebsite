@@ -10,15 +10,12 @@ namespace SchoolTemplate.Controllers
 {
     public class HomeController : Controller
     {
-        // zorg ervoor dat je hier je gebruikersnaam (leerlingnummer) en wachtwoord invult
         string connectionString = "Server=172.16.160.21;Port=3306;Database=109807;Uid=109807;Pwd=rfultyRa;";
-
 
         public IActionResult Index()
         {
             return View(GetFestivals());
         }
-
 
         [Route("festival/{Id}")]
         public IActionResult Festival(string id)
@@ -30,20 +27,18 @@ namespace SchoolTemplate.Controllers
             return View(model);
         }
 
-
         [Route("gelukt")]
         public IActionResult Gelukt()
         {
             return View();
         }
 
-
         [Route("Contact")]
         public IActionResult Contact()
         {
             return View();
-
         }
+
         [Route("Contact")]
         [HttpPost]
         public IActionResult Contact(PersonModel model)
@@ -55,6 +50,7 @@ namespace SchoolTemplate.Controllers
 
             return Redirect("/gelukt");
         }
+
         private void SavePerson(PersonModel person)
         {
             using (MySqlConnection conn = new MySqlConnection(connectionString))
@@ -73,12 +69,6 @@ namespace SchoolTemplate.Controllers
         public IActionResult Agenda()
         {
             return View(GetFestivals());
-        }
-
-        [Route("Tickets")]
-        public IActionResult Tickets()
-        {
-            return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
@@ -105,18 +95,16 @@ namespace SchoolTemplate.Controllers
                             Id = Convert.ToInt32(reader["Id"]),
                             Naam = reader["Naam"].ToString(),
                             Beschrijving = reader["Beschrijving"].ToString(),
-                           
                             Prijs = reader["Prijs"].ToString(),
                     
                         };
-                    
                         festivals.Add(f);
                     }
                 }
             }
-
             return festivals;
         }
+
         private Festival GetFestival(string id)
         {
             List<Festival> festivals = new List<Festival>();
@@ -124,6 +112,7 @@ namespace SchoolTemplate.Controllers
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
+
                 MySqlCommand cmd = new MySqlCommand($"select * from festival where id = {id}", conn);
 
                 using (var reader = cmd.ExecuteReader())
@@ -135,15 +124,12 @@ namespace SchoolTemplate.Controllers
                             Id = Convert.ToInt32(reader["Id"]),
                             Naam = reader["Naam"].ToString(),
                             Beschrijving = reader["Beschrijving"].ToString(),
-                            
                             Prijs = reader["Prijs"].ToString(),
-                            
                         };
                         festivals.Add(f);
                     }
                 }
             }
-
             return festivals[0];
         }
         private List<FestivalDag> GetFestivalDag(string festivalId)
@@ -151,6 +137,7 @@ namespace SchoolTemplate.Controllers
             List<FestivalDag> festivals = new List<FestivalDag>();
 
             using (MySqlConnection conn = new MySqlConnection(connectionString))
+
             {
                 conn.Open();
                 MySqlCommand cmd = new MySqlCommand($"select * from festival_dag where festival_id = {festivalId}", conn);
@@ -167,13 +154,11 @@ namespace SchoolTemplate.Controllers
                             Start = reader["Start"].ToString(),
                             Eind = reader["Eind"].ToString(),
                             Voorraad = Convert.ToInt32(reader["Voorraad"]),
-
                         };
                         festivals.Add(f);
                     }
                 }
             }
-
             return festivals;
         }
     }
