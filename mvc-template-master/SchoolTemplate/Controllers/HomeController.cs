@@ -96,7 +96,8 @@ namespace SchoolTemplate.Controllers
                             Naam = reader["Naam"].ToString(),
                             Beschrijving = reader["Beschrijving"].ToString(),
                             Prijs = reader["Prijs"].ToString(),
-                    
+                            Afbeelding = reader["Afbeelding"].ToString(),
+
                         };
                         festivals.Add(f);
                     }
