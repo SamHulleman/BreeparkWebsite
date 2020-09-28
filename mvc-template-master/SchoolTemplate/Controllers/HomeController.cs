@@ -135,7 +135,7 @@ namespace SchoolTemplate.Controllers
                             Id = Convert.ToInt32(reader["Id"]),
                             Naam = reader["Naam"].ToString(),
                             Beschrijving = reader["Beschrijving"].ToString(),
-                            
+                            Afbeelding = reader["Afbeelding"].ToString(),
                             Prijs = reader["Prijs"].ToString(),
                             
                         };
