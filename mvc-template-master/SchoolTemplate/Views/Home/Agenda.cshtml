@@ -1,4 +1,29 @@
-﻿
+﻿@using SchoolTemplate.Database;
+@model List<Festival>
+@{
+    ViewData["Title"] = "Agenda";
+   
+}
+
 <h1>Agenda</h1>
+
+
+
+    @if (Model != null)
+    {
+        foreach (Festival festival in Model)
+        {
+
+<div class="box-agenda">
+    
+    <a href="/festival/@festival.Id">@festival.Naam </a>
+</div>
+
+
+
+
+
+        }
+    }
 
 

@@ -15,21 +15,66 @@ namespace SchoolTemplate.Controllers
 
 
         public IActionResult Index()
-        {     
+        {
+            return View(GetFestivals());
+        }
 
-            return View(GetFestival());
-        }      
+
+        [Route("festival/{Id}")]
+        public IActionResult Festival(string id)
+        {
+            var model = GetFestival(id);
+            var Festivaldagen = GetFestivalDag(id);
+            ViewData["festivaldagen"] = Festivaldagen;
+
+            return View(model);
+        }
+
+
+        [Route("gelukt")]
+        public IActionResult Gelukt()
+        {
+            return View();
+        }
+
 
         [Route("Contact")]
         public IActionResult Contact()
         {
             return View();
+
         }
+        [Route("Contact")]
+        [HttpPost]
+        public IActionResult Contact(PersonModel model)
+       {
+            if (!ModelState.IsValid)
+                return View(model);
+
+            SavePerson(model);
+
+            return Redirect("/gelukt");
+        }
+        private void SavePerson(PersonModel person)
+        {
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand("INSERT INTO klant(naam,achternaam,emailadres,geboortedatum) VALUEs(?voornaam,?achternaam,?emailadres,?geboortedatum)", conn);
+                cmd.Parameters.Add("?voornaam", MySqlDbType.VarChar).Value = person.Voornaam;
+                cmd.Parameters.Add("?achternaam", MySqlDbType.VarChar).Value = person.Achternaam;
+                cmd.Parameters.Add("?emailadres", MySqlDbType.VarChar).Value = person.Email;
+                cmd.Parameters.Add("?geboortedatum", MySqlDbType.Date).Value = person.Geboortedatum;
+                cmd.ExecuteNonQuery();
+            }
+        }
+
         [Route("Agenda")]
         public IActionResult Agenda()
         {
-            return View();
+            return View(GetFestivals());
         }
+
         [Route("Tickets")]
         public IActionResult Tickets()
         {
@@ -42,7 +87,7 @@ namespace SchoolTemplate.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }    
 
-        private List<Festival> GetFestival()
+        private List<Festival> GetFestivals()
         {
             List<Festival> festivals = new List<Festival>();
 
@@ -57,12 +102,72 @@ namespace SchoolTemplate.Controllers
                     {
                         Festival f = new Festival
                         {
-                            id = Convert.ToInt32(reader["Id"]),
-                            naam = reader["Naam"].ToString(),
-                            beschrijving = reader["beschrijving"].ToString(),
-                            datum = reader["datum"].ToString(),
-                            tijd = reader["tijd"].ToString(),
-                            prijs = reader["prijs"].ToString()
+                            Id = Convert.ToInt32(reader["Id"]),
+                            Naam = reader["Naam"].ToString(),
+                            Beschrijving = reader["Beschrijving"].ToString(),
+                            Prijs = reader["Prijs"].ToString(),
+                            Afbeelding = reader["Afbeelding"].ToString(),
+
+                        };
+                    
+                        festivals.Add(f);
+                    }
+                }
+            }
+
+            return festivals;
+        }
+        private Festival GetFestival(string id)
+        {
+            List<Festival> festivals = new List<Festival>();
+
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand($"select * from festival where id = {id}", conn);
+
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Festival f = new Festival
+                        {
+                            Id = Convert.ToInt32(reader["Id"]),
+                            Naam = reader["Naam"].ToString(),
+                            Beschrijving = reader["Beschrijving"].ToString(),
+                            Afbeelding = reader["Afbeelding"].ToString(),
+                            Prijs = reader["Prijs"].ToString(),
+                            
+                        };
+                        festivals.Add(f);
+                    }
+                }
+            }
+
+            return festivals[0];
+        }
+        private List<FestivalDag> GetFestivalDag(string festivalId)
+        {
+            List<FestivalDag> festivals = new List<FestivalDag>();
+
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand($"select * from festival_dag where festival_id = {festivalId}", conn);
+
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        FestivalDag f = new FestivalDag
+                        {
+                            Id = Convert.ToInt32(reader["Id"]),
+                            Festival_id = Convert.ToInt32(reader["Festival_id"]),
+                            Datum = DateTime.Parse(reader["Datum"].ToString()),
+                            Start = reader["Start"].ToString(),
+                            Eind = reader["Eind"].ToString(),
+                            Voorraad = Convert.ToInt32(reader["Voorraad"]),
+
                         };
                         festivals.Add(f);
                     }
@@ -72,4 +177,6 @@ namespace SchoolTemplate.Controllers
             return festivals;
         }
     }
-}
+      
+    }
+

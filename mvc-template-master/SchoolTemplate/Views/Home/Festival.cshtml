@@ -1,0 +1,22 @@
+﻿@using SchoolTemplate.Database;
+@model Festival
+@{
+    ViewData["Title"] = "Festival";
+    List<FestivalDag> festivalDagen = ViewData["festivaldagen"] as List<FestivalDag>;
+}
+
+<h1>@Model.Naam</h1>
+<div class="column-festival">
+    <div class="festival-text">
+        <img src="@Model.Afbeelding" />
+    </div>
+
+    <div class="festival-text">
+        @foreach (FestivalDag f in festivalDagen)
+        {
+        <h2>@f.Datum.ToString("d") <br /> @f.Start - @f.Eind</h2>
+        <h4>@Model.Beschrijving <br /> €  @Model.Prijs per stuk.</h4>
+
+        }
+    </div>
+    </div>

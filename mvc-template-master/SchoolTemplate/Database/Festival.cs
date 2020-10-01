@@ -4,16 +4,20 @@ namespace SchoolTemplate.Database
 {
     public class Festival
     {
-        public int id { get; set; }
+        public int Id { get; set; }
 
-        public string naam { get; set; }
+        public string Naam { get; set; }
 
-        public string beschrijving { get; set; }
+        public string Beschrijving { get; set; }
 
-        public string datum { get; set; }
-        public string tijd { get; set; }
+        public DateTimeOffset Datum { get; set; }
+        public string Tijd { get; set; }
 
-        public string prijs { get; set; }
+        public string Prijs { get; set; }
+
+        public string Beschikbaarheid { get; set; }
+
+        public string Afbeelding { get; set; }
     }
 }
 
