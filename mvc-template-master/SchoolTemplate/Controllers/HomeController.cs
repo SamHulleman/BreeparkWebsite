@@ -48,7 +48,7 @@ namespace SchoolTemplate.Controllers
 
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
-                conn.Open();
+               
                 MySqlCommand cmd = new MySqlCommand("select * from festival", conn);
 
                 using (var reader = cmd.ExecuteReader())
