@@ -37,12 +37,20 @@ namespace SchoolTemplate.Controllers
         }
 
 
+        [Route("Route")]
+        public IActionResult Route()
+        {
+            return View();
+
+        }
+
         [Route("Contact")]
         public IActionResult Contact()
         {
             return View();
 
         }
+
         [Route("Contact")]
         [HttpPost]
         public IActionResult Contact(PersonModel model)
