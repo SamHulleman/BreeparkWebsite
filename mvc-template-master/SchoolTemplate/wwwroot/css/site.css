@@ -73,11 +73,10 @@ h5 {
     padding: 50px;
     font-size: 25px;
     box-sizing: border-box;
-    
 }
 
 .column-box {
-    display: flex; 
+    display: flex;
 }
 
 .box {
