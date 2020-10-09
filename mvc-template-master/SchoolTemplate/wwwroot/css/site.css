@@ -22,7 +22,6 @@ nav li {
         transition: background-color 1s;
     }
 
-/* Change the link color to #111 (black) on hover */
 li a:hover {
     background-color: #111;
 }
@@ -30,6 +29,11 @@ li a:hover {
 h1 {
     text-align: center;
     font-size: 50px;
+}
+
+h2 {
+    text-align: left;
+    font-size: 25px;
 }
 
 h5 {
@@ -53,19 +57,18 @@ h5 {
 .column-contact{
     
 }
-.maps {
-    float: left;
-    width: 30vw;
 
-   
+.maps {
+    width: 30vw;
 }
+
 .contact-form {
     width: 30vw;
-    
 }
+
 .contact-pagina {
     background-color: #40E0D0;
-    float: right;
+    float: left;
     width: 30vw;
     padding: 50px;
     font-size: 25px;
