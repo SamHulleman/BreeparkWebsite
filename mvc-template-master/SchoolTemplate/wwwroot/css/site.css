@@ -31,6 +31,11 @@ h1 {
     font-size: 50px;
 }
 
+h2 {
+    text-align: left;
+    font-size: 25px;
+}
+
 h5 {
     text-align: center;
     font-size: 30px;
@@ -52,16 +57,18 @@ h5 {
 .column-contact{
     
 }
+
 .maps {
-    float: left;
     width: 30vw;
 }
+
 .contact-form {
     width: 30vw;
 }
+
 .contact-pagina {
     background-color: #40E0D0;
-    float: right;
+    float: left;
     width: 30vw;
     padding: 50px;
     font-size: 25px;
