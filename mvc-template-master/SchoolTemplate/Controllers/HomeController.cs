@@ -10,7 +10,6 @@ namespace SchoolTemplate.Controllers
 {
     public class HomeController : Controller
     {
-        // zorg ervoor dat je hier je gebruikersnaam (leerlingnummer) en wachtwoord invult
         string connectionString = "Server=172.16.160.21;Port=3306;Database=109807;Uid=109807;Pwd=rfultyRa;";
 
 
