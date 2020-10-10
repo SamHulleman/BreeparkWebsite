@@ -24,13 +24,14 @@
 <div class="contact-form">
     <form method="post">
         <input type="text" name="Voornaam" placeholder="Voornaam" /> <br />
-        <input type="text" name="Achternaam" placeholder="Achternaam" />
+        @Html.ValidationMessageFor(m => m.Voornaam) <br />
+        <input type="text" name="Achternaam" placeholder="Achternaam" /> <br />
         @Html.ValidationMessageFor(m => m.Achternaam) <br />
-        <input type="text" name="Email" placeholder="Emailadres" />
+        <input type="text" name="Email" placeholder="Emailadres" /> <br />
         @Html.ValidationMessageFor(m => m.Email) <br />
-        <input type="datetime" name="Geboortedatum" placeholder="Geboortedatum" /> <br />
+        <input type="date" name="Geboortedatum" placeholder="Geboortedatum" /> <br />
+        @Html.ValidationMessageFor(m => m.Geboortedatum) <br />
         <input type="submit" value="verstuur" />
-
     </form>
 
 </div>
