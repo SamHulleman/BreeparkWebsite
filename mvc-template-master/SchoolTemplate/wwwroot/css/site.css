@@ -108,7 +108,8 @@ h5 {
     display: flex;
 }
 .festival-img {
-    width: 50%;
+    width: 20%;
+    height: 50%; 
     flex-grow: 1;
     overflow: hidden;
 }
