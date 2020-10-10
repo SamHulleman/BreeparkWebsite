@@ -171,8 +171,6 @@ namespace SchoolTemplate.Controllers
                             Datum = DateTime.Parse(reader["Datum"].ToString()),
                             Start = reader["Start"].ToString(),
                             Eind = reader["Eind"].ToString(),
-                            Voorraad = Convert.ToInt32(reader["Voorraad"]),
-
                         };
                         festivals.Add(f);
                     }
