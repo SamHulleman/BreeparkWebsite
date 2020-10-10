@@ -36,6 +36,11 @@ h2 {
     font-size: 25px;
 }
 
+h3 {
+    text-align: center;
+    font-size: 30px;
+}
+
 h5 {
     text-align: center;
     font-size: 30px;
@@ -44,7 +49,9 @@ h5 {
 .home-img {
     width: 800px;
     height: 500px;
-    padding-left: 360px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
@@ -56,7 +63,11 @@ h5 {
 
 
 .maps {
-    width: 30vw;
+    width: 550px;
+    height: 500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .contact-form {
@@ -115,8 +126,10 @@ h5 {
 }
 
 
-.duimpjes-image img {
-    width: 800px;
-    height: 500px;
-    padding-left: 380px;
+.gelukt-image img {
+    width: 600px;
+    height: 400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
