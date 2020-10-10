@@ -14,7 +14,7 @@
     <div class="festival-text">
         @foreach (FestivalDag f in festivalDagen)
         {
-        <h2>@f.Datum.ToString("d") <br /> @f.Start - @f.Eind</h2>
+        <h2>@f.Datum.ToString("D") <br /> @f.Start- @f.Eind</h2>
         <h4>@Model.Beschrijving <br /> €  @Model.Prijs per stuk.</h4>
 
         }
