@@ -11,16 +11,16 @@ nav li {
     text-align: center;
 }
 
-    nav li a {
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 80px 16px;
-        text-decoration: none;
-        text-align: center;
-        padding-top: 30px;
-        transition: background-color 1s;
-    }
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 80px 16px;
+    text-decoration: none;
+    text-align: center;
+    padding-top: 30px;
+    transition: background-color 1s;
+}
 
 li a:hover {
     background-color: #111;
