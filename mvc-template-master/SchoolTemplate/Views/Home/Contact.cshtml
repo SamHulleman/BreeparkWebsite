@@ -10,19 +10,24 @@
 
 }
 
-<h2>Contactgegevens</h2>
+
 
 <div class="contact-pagina">
+    <h2 id="h2centerform">Contactgegevens</h2>
+    <hr />
     <p> Bavelseparklaan, 4817 ZX Breda</p>
     <p> algemene vragen: 076-763 046 </p>
     <p> Whatsapp (enkele berichten): 06-100 537 52 </p>
 
 </div>
 
-<h2>Contactformulier</h2>
 
-<div class="contact-form">
-    <form method="post">
+<div class="contact-pagina">
+  
+        <h2 id="h2centerform">Contactformulier</h2>
+    <hr />
+    <!-- formulier wordt verstuurd naar database en als de invoer niet goed is wordt het met eigen gemaakt error message weer gegeven-->
+    <form text- method="post">
         <input type="text" name="Voornaam" placeholder="Voornaam" /> <br />
         @Html.ValidationMessageFor(m => m.Voornaam) <br />
         <input type="text" name="Achternaam" placeholder="Achternaam" /> <br />

@@ -10,14 +10,17 @@ namespace SchoolTemplate.Controllers
 {
     public class HomeController : Controller
     {
+        //database connectie
         string connectionString = "Server=informatica.st-maartenscollege.nl;Port=3306;Database=109807;Uid=109807;Pwd=rfultyRa;";
         
+
+        //homescreen dit zorgt ervoor dat je begint op de homescreen
         public IActionResult Index()
         {
             return View(GetFestivals());
            
         }
-
+        //redirect naar de id paginas van de festivals
         [Route("festival/{Id}")]
         public IActionResult Festival(string id)
         {
@@ -27,27 +30,27 @@ namespace SchoolTemplate.Controllers
 
             return View(model);
         }
-
+        //redirect naar gelukt
         [Route("gelukt")]
         public IActionResult Gelukt()
         {
             return View();
         }
-
+        //redirect naar Route
         [Route("Route")]
         public IActionResult Route()
         {
             return View();
 
         }
-
+        //redirect naar contact
         [Route("Contact")]
         public IActionResult Contact()
         {
             return View();
 
         }
-
+        //als de  contact formulier goed is ingevuld volgends de requirements dan wordt je naar gelukt gestuurd
         [Route("Contact")]
         [HttpPost]
         public IActionResult Contact(PersonModel model)
@@ -59,7 +62,7 @@ namespace SchoolTemplate.Controllers
 
             return Redirect("/gelukt");
         }
-
+        //data naar database sturen
         private void SavePerson(PersonModel person)
         {
             using (MySqlConnection conn = new MySqlConnection(connectionString))
@@ -80,18 +83,13 @@ namespace SchoolTemplate.Controllers
             return View(GetFestivals());
         }
 
-        [Route("Tickets")]
-        public IActionResult Tickets()
-        {
-            return View();
-        }
-
+        //iets met errors
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }    
-
+        //een lijst van de festivalls die er zijn die in agenda wordt getoond uit de database
         private List<Festival> GetFestivals()
         {
             List<Festival> festivals = new List<Festival>();
@@ -122,6 +120,8 @@ namespace SchoolTemplate.Controllers
 
             return festivals;
         }
+
+        //zet data neer van de database festival
         private Festival GetFestival(string id)
         {
             List<Festival> festivals = new List<Festival>();
@@ -151,6 +151,7 @@ namespace SchoolTemplate.Controllers
 
             return festivals[0];
         }
+        //selecteer alles van de database festival_dag waar de festival id is geselecteerd
         private List<FestivalDag> GetFestivalDag(string festivalId)
         {
             List<FestivalDag> festivals = new List<FestivalDag>();

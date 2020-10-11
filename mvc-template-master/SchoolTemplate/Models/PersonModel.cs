@@ -6,6 +6,7 @@ namespace SchoolTemplate.Models
 {
     public class PersonModel
     {
+        //error messages als de invoer fout is 
         [Required(ErrorMessage = "Voornaam is verplicht!")]
         public string Voornaam { get; set; }
 
@@ -17,6 +18,7 @@ namespace SchoolTemplate.Models
         public string Email { get; set; }
 
         [Required(ErrorMessage = "Geboortedatum is verplicht!")]
-        public DateTime Geboortedatum { get; set; }
+        public DateTime? Geboortedatum { get; set; }
+
     }
 }
