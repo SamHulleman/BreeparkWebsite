@@ -19,13 +19,13 @@
         <!--haal data op van database en wordt vervolgens neergezet-->
         @foreach (FestivalDag f in festivalDagen)
         {
-            <h2>@f.Datum.ToString("D") <br /> @f.Start- @f.Eind</h2>
-            <p>&nbsp;</p>
-            <p>
+            <h3>@f.Datum.ToString("D") <br /> @f.Start- @f.Eind</h3>
+            <h6>&nbsp;</h6>
+            <h6>
                 @Model.Beschrijving <br />
-                <p>&nbsp;</p>
-                <p>Prijs: €  @Model.Prijs per stuk.</p>
-            </p>
+                <h6>&nbsp;</h6>
+                <h6>Prijs: €  @Model.Prijs per stuk.</h6>
+            </h6>
 
 
 

@@ -1,6 +1,7 @@
 ﻿
 * {
     font-family: 'Bookman Old Style';
+    background-color: #FFF5EE;
 }
 
 nav ul {
@@ -15,15 +16,17 @@ nav ul {
 nav li {
     float: right;
     text-align: center;
+    background-color: #40E0D0;
 }
 
     nav li a {
         display: block;
-        color: white;
+        background-color: #40E0D0;
         text-align: center;
         padding: 80px 16px;
         text-decoration: none;
         text-align: center;
+        color: white;
         padding-top: 30px;
         transition: background-color 1s;
     }
@@ -40,23 +43,35 @@ h1 {
 h2 {
     text-align: left;
     font-size: 25px;
+    background-color: #40E0D0;
 }
 
 h3 {
     text-align: center;
-    font-size: 30px;
+    font-size: 25px;
 }
 
-h4{
+h4 {
     font-size: 17px;
     margin-top: 10px;
     text-align: center;
+    background-color: #40E0D0;
 }
 
 h5 {
     text-align: center;
     font-size: 30px;
+    background-color: #40E0D0;
 }
+
+h6{
+    font-size: 15px;
+}
+p {
+    background-color: #40E0D0;
+}
+
+
 
 .home-img {
     width: 800px;
@@ -91,6 +106,7 @@ h5 {
     outline: solid 1px #000000;
     margin-left: auto;
     margin-right: auto;
+    background-color: #40E0D0;
 }
 
 .contact-pagina {
@@ -139,6 +155,7 @@ h5 {
     text-decoration: none;
     font-weight: bold;
     font-size: 25px;
+    background-color: #40E0D0;
 }
 
 .column-festival {
@@ -147,6 +164,7 @@ h5 {
     margin-right: auto;
     margin-top: 3%;
     flex-grow: 1;
+    background-color: #FFF5EE;
 }
 
 .festival-img {
@@ -218,6 +236,7 @@ input {
 
     form{
         text-align:center;
+        background-color: #40E0D0;
     }
 
 #h2center {
