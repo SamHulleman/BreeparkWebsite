@@ -135,15 +135,23 @@ h5 {
     height: 100%;
     flex-grow: 1;
     overflow: hidden;
-    margin-left:12%;
-    margin-right: 15px;
+    margin-left: 20%;
+    margin-right: 25px;
 }
 
 .festival-text {
+    width: 55%;
+    height: 60%;
     flex-grow: 1;
     padding: 10px;
 }
 
+.festival-beschrijving {
+    width: 55%;
+    height: 60%;
+    word-break: inherit;
+    padding-left: 80px;
+}
 .gelukt-image img {
     width: 600px;
     height: 400px;
