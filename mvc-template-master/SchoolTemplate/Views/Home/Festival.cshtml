@@ -13,11 +13,16 @@
     </div>
 
     <div class="festival-text">
-        <!--haal data op van data base en wordt vervolgens neer gedisplayed-->
+        <div class=" festival-beschrijving"
+                  </div>
+
+        <!--haal data op van database en wordt vervolgens neergezet-->
         @foreach (FestivalDag f in festivalDagen)
         {
         <h2>@f.Datum.ToString("D") <br /> @f.Start- @f.Eind</h2>
-        <h4>@Model.Beschrijving <br /> €  @Model.Prijs per stuk.</h4>
+        <h4>@Model.Beschrijving <br /> Prijs: €  @Model.Prijs per stuk.</h4>
+
+   
 
         }
     </div>
