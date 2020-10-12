@@ -73,8 +73,9 @@ h5 {
 
 .contact-form {
     width: 30vw;
-    outline : solid 1px #000000;
-    
+    outline: solid 1px #000000;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .contact-pagina {
@@ -86,7 +87,9 @@ h5 {
     border-radius: 10px;
     border: 1px solid #000000;
     padding: 15px;
-    margin-top:15px;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .column-box {
@@ -95,13 +98,13 @@ h5 {
 
 .box {
     float: left;
-    width: 26vw;
-    padding: 50px;
+    height: 80px;
+    width: 20vw;
     background-color: #40E0D0;
     border-style: solid;
     border-color: black;
     text-align: center;
-    margin-top: 25px;
+    margin-top: 30px;
     flex-grow: 1;
 }
 
@@ -120,14 +123,19 @@ h5 {
     font-weight: bold;
     font-size: 25px;
 }
-.column-festival{
+.column-festival {
     display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
+    flex-grow: 1;
 }
 .festival-img {
     width: 20vw;
-    height: 30vh; 
+    height: 30vh;
     flex-grow: 1;
     overflow: hidden;
+    padding-left: 100px;
 }
 
 .festival-fotos {
@@ -150,7 +158,7 @@ h5 {
     width: 55%;
     height: 60%;
     word-break: inherit;
-    padding-left: 80px;
+    padding-left: 120px;
 }
 .gelukt-image img {
     width: 600px;
