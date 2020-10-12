@@ -12,8 +12,6 @@ namespace SchoolTemplate.Database
         public string Start { get; set; }
 
         public string Eind { get; set; }
-
-        public int Voorraad { get; set; }
     }
 }
 
