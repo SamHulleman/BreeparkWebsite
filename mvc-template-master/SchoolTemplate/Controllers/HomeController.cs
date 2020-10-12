@@ -11,10 +11,10 @@ namespace SchoolTemplate.Controllers
     public class HomeController : Controller
     {
         //database connectie
-        string connectionString = "Server=informatica.st-maartenscollege.nl;Port=3306;Database=109807;Uid=109807;Pwd=rfultyRa;";
-        
+        string connectionString = "Server=172.16.162.21;Port=3306;Database=109807;Uid=109807;Pwd=rfultyRa;";
+        // informatica.st-maartenscollege.nl
 
-        //homescreen dit zorgt ervoor dat je begint op de homescreen
+        //homescreen: dit zorgt ervoor dat je begint op de homescreen
         public IActionResult Index()
         {
             return View(GetFestivals());
@@ -50,7 +50,7 @@ namespace SchoolTemplate.Controllers
             return View();
 
         }
-        //als de  contact formulier goed is ingevuld volgends de requirements dan wordt je naar gelukt gestuurd
+        //als het contactformulier goed is ingevuld volgens de requirements dan wordt je naar gelukt gestuurd
         [Route("Contact")]
         [HttpPost]
         public IActionResult Contact(PersonModel model)
@@ -83,13 +83,13 @@ namespace SchoolTemplate.Controllers
             return View(GetFestivals());
         }
 
-        //iets met errors
+        //errors
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }    
-        //een lijst van de festivalls die er zijn die in agenda wordt getoond uit de database
+        //een lijst van de festivalls die er zijn die in agenda worden getoond uit de database
         private List<Festival> GetFestivals()
         {
             List<Festival> festivals = new List<Festival>();
@@ -151,7 +151,7 @@ namespace SchoolTemplate.Controllers
 
             return festivals[0];
         }
-        //selecteer alles van de database festival_dag waar de festival id is geselecteerd
+        //selecteer alles van de database festival_dag waar de festival_id is geselecteerd
         private List<FestivalDag> GetFestivalDag(string festivalId)
         {
             List<FestivalDag> festivals = new List<FestivalDag>();
