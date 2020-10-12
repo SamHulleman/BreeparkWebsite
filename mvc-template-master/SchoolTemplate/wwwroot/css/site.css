@@ -77,10 +77,13 @@ h5 {
 
 .maps {
     width: 550px;
-    height: 500px;
+    height: 450px;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    border-style: solid;
+    border-color: black;
+    margin-bottom: 20px;
 }
 
 .contact-form {
@@ -122,11 +125,13 @@ h5 {
 
 .box-agenda {
     float: left;
-    width: 100%;
+    width: 92%;
     padding: 50px;
     background-color: #40E0D0;
     text-align: left;
-    margin-top: 25px; 
+    margin-top: 25px;
+    border-style: solid;
+    border-color: black;
 }
 
 .box-agenda a {
