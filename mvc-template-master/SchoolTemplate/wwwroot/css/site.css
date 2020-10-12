@@ -1,9 +1,15 @@
 ﻿
+* {
+    font-family: 'Bookman Old Style';
+}
+
 nav ul {
     list-style-type: none;
     overflow: hidden;
     background-color: #40E0D0;
     height: 80px;
+    border-style: solid;
+    border-color: black;
 }
 
 nav li {
@@ -11,16 +17,16 @@ nav li {
     text-align: center;
 }
 
-nav li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 80px 16px;
-    text-decoration: none;
-    text-align: center;
-    padding-top: 30px;
-    transition: background-color 1s;
-}
+    nav li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 80px 16px;
+        text-decoration: none;
+        text-align: center;
+        padding-top: 30px;
+        transition: background-color 1s;
+    }
 
 li a:hover {
     background-color: #111;
@@ -41,6 +47,12 @@ h3 {
     font-size: 30px;
 }
 
+h4{
+    font-size: 17px;
+    margin-top: 10px;
+    text-align: center;
+}
+
 h5 {
     text-align: center;
     font-size: 30px;
@@ -59,27 +71,40 @@ h5 {
     float: left;
     width: 120px;
     height: 80px;
+    border-style: solid;
+    border-color: black;
 }
-
 
 .maps {
     width: 550px;
-    height: 500px;
+    height: 450px;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    border-style: solid;
+    border-color: black;
+    margin-bottom: 20px;
 }
 
 .contact-form {
     width: 30vw;
+    outline: solid 1px #000000;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .contact-pagina {
     background-color: #40E0D0;
-    width: 50vw;
+    width: 40vw;
     padding: 50px;
     font-size: 25px;
     box-sizing: border-box;
+    border-radius: 10px;
+    border: 1px solid #000000;
+    padding: 15px;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .column-box {
@@ -88,23 +113,25 @@ h5 {
 
 .box {
     float: left;
-    width: 26vw;
-    padding: 50px;
+    height: 80px;
+    width: 20vw;
     background-color: #40E0D0;
     border-style: solid;
     border-color: black;
     text-align: center;
-    margin-top: 25px;
+    margin-top: 30px;
     flex-grow: 1;
 }
 
 .box-agenda {
     float: left;
-    width: 100%;
+    width: 92%;
     padding: 50px;
     background-color: #40E0D0;
     text-align: left;
-    margin-top: 25px; 
+    margin-top: 25px;
+    border-style: solid;
+    border-color: black;
 }
 
 .box-agenda a {
@@ -113,19 +140,45 @@ h5 {
     font-weight: bold;
     font-size: 25px;
 }
-.column-festival{
+
+.column-festival {
     display: flex;
-}
-.festival-img img{
-    width: 20%;
-    height: 50%; 
-    flex-grow: 1;
-    overflow: hidden;
-}
-.festival-text {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
     flex-grow: 1;
 }
 
+.festival-img {
+    width: 20vw;
+    height: 30vh;
+    flex-grow: 1;
+    overflow: hidden;
+    padding-left: 100px;
+    padding-top: 30px;
+}
+
+.festival-fotos {
+    width: 100%;
+    height: 100%;
+    flex-grow: 1;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.festival-text {
+    width: 55%;
+    height: 60%;
+    flex-grow: 1;
+}
+
+.festival-beschrijving {
+    width: 55%;
+    height: 60%;
+    word-break: inherit;
+    padding-left: 120px;
+}
 
 .gelukt-image img {
     width: 600px;
@@ -133,4 +186,53 @@ h5 {
     display: block;
     margin-left: auto;
     margin-right: auto;
+  
 }
+
+input {
+    background: #fff;
+    color: #525865;
+    border-radius: 4px;
+    border: 1px solid #d1d1d1;
+    box-shadow: inset 1px 2px 8px rgba(0, 0, 0, 0.07);
+    font-size: 0.7em;
+   
+    line-height: 1;
+    outline: none;
+    padding: 0.6em 1.45em 0.7em;
+    -webkit-transition: .18s ease-out;
+    -moz-transition: .18s ease-out;
+    -o-transition: .18s ease-out;
+    transition: .18s ease-out;
+}
+
+    input:hover {
+        box-shadow: inset 1px 2px 8px rgba(0, 0, 0, 0.02);
+    }
+
+    input:focus {
+        color: #4b515d;
+        border: 1px solid #B8B6B6;
+        box-shadow: inset 1px 2px 4px rgba(0, 0, 0, 0.01), 0px 0px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    form{
+        text-align:center;
+    }
+
+#h2center {
+    text-align: center;
+}
+
+    #h2centerform
+    {
+        text-align:center;
+        font-size: 33px;
+        margin: 0 !important;
+    }
+
+    hr{
+        border:solid 1px #000000  ;
+        background: #000000;
+        border-radius: 10px;
+    }
