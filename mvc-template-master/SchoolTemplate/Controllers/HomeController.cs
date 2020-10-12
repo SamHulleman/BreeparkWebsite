@@ -92,6 +92,7 @@ namespace SchoolTemplate.Controllers
         //een lijst van de festivalls die er zijn die in agenda wordt getoond uit de database
         private List<Festival> GetFestivals()
         {
+
             List<Festival> festivals = new List<Festival>();
 
             using (MySqlConnection conn = new MySqlConnection(connectionString))
