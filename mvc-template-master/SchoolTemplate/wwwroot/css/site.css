@@ -22,7 +22,6 @@ nav li {
         transition: background-color 1s;
     }
 
-/* Change the link color to #111 (black) on hover */
 li a:hover {
     background-color: #111;
 }
@@ -43,7 +42,6 @@ h5 {
     padding-left: 380px;
 }
 
-
 .logo-image img {
     float: left;
     width: 120px;
@@ -59,10 +57,12 @@ h5 {
 
    
 }
+
 .contact-form {
     width: 30vw;
     
 }
+
 .contact-pagina {
     background-color: #40E0D0;
     float: right;
@@ -73,9 +73,7 @@ h5 {
     
 }
 
-.column-box {
-    display: flex; 
-}
+
 
 .box {
     float: left;
