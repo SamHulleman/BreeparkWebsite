@@ -1,27 +1,35 @@
 ﻿
+* {
+    font-family: 'Bookman Old Style';
+    background-color: #FFF5EE;
+}
 
 nav ul {
     list-style-type: none;
     overflow: hidden;
     background-color: #40E0D0;
     height: 80px;
+    border-style: solid;
+    border-color: black;
 }
 
 nav li {
     float: right;
     text-align: center;
+    background-color: #40E0D0;
 }
 
-nav li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 80px 16px;
-    text-decoration: none;
-    text-align: center;
-    padding-top: 30px;
-    transition: background-color 1s;
-}
+    nav li a {
+        display: block;
+        background-color: #40E0D0;
+        text-align: center;
+        padding: 80px 16px;
+        text-decoration: none;
+        text-align: center;
+        color: white;
+        padding-top: 30px;
+        transition: background-color 1s;
+    }
 
 li a:hover {
     background-color: #111;
@@ -35,16 +43,34 @@ h1 {
 h2 {
     text-align: left;
     font-size: 25px;
+    background-color: #40E0D0;
 }
 
 h3 {
     text-align: center;
-    font-size: 30px;
+    font-size: 25px;
+}
+
+h4 {
+    font-size: 17px;
+    margin-top: 10px;
+    text-align: center;
+    background-color: #40E0D0;
 }
 
 h5 {
     text-align: center;
     font-size: 30px;
+    background-color: #40E0D0;
+    border-style: solid;
+    border-color: black;
+}
+
+h6{
+    font-size: 15px;
+}
+p {
+    background-color: #40E0D0;
 }
 
 .home-img {
@@ -60,15 +86,19 @@ h5 {
     float: left;
     width: 120px;
     height: 80px;
+    border-style: solid;
+    border-color: black;
 }
-
 
 .maps {
     width: 550px;
-    height: 500px;
+    height: 450px;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    border-style: solid;
+    border-color: black;
+    margin-bottom: 20px;
 }
 
 .contact-form {
@@ -76,6 +106,7 @@ h5 {
     outline: solid 1px #000000;
     margin-left: auto;
     margin-right: auto;
+    background-color: #40E0D0;
 }
 
 .contact-pagina {
@@ -110,11 +141,14 @@ h5 {
 
 .box-agenda {
     float: left;
-    width: 100%;
+    width: 92%;
     padding: 50px;
     background-color: #40E0D0;
     text-align: left;
-    margin-top: 25px; 
+    margin-top: 25px;
+    border-style: solid;
+    border-color: black;
+    margin-bottom: 20px;
 }
 
 .box-agenda a {
@@ -122,20 +156,25 @@ h5 {
     text-decoration: none;
     font-weight: bold;
     font-size: 25px;
+    background-color: #40E0D0;
 }
+
 .column-festival {
     display: flex;
     margin-left: auto;
     margin-right: auto;
     margin-top: 3%;
     flex-grow: 1;
+    background-color: #FFF5EE;
 }
+
 .festival-img {
     width: 20vw;
     height: 30vh;
     flex-grow: 1;
     overflow: hidden;
     padding-left: 100px;
+    padding-top: 30px;
 }
 
 .festival-fotos {
@@ -143,15 +182,14 @@ h5 {
     height: 100%;
     flex-grow: 1;
     overflow: hidden;
-    margin-left: 20%;
-    margin-right: 25px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .festival-text {
     width: 55%;
     height: 60%;
     flex-grow: 1;
-    padding: 10px;
 }
 
 .festival-beschrijving {
@@ -160,6 +198,7 @@ h5 {
     word-break: inherit;
     padding-left: 120px;
 }
+
 .gelukt-image img {
     width: 600px;
     height: 400px;
@@ -168,6 +207,7 @@ h5 {
     margin-right: auto;
   
 }
+
 input {
     background: #fff;
     color: #525865;
@@ -197,11 +237,13 @@ input {
 
     form{
         text-align:center;
+        background-color: #40E0D0;
     }
 
 #h2center {
     text-align: center;
 }
+
     #h2centerform
     {
         text-align:center;
