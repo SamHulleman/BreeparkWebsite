@@ -2,29 +2,29 @@
 @model List<Festival>
 @{
     ViewData["Title"] = "Agenda";
-   
+
 }
 
 <h1>Agenda</h1>
 
 
-<!--Laat data zien van de database festival waarvan de naam en als je op de naam klikt wordt je geredirect naar de aangekozen festival-->
-    @if (Model != null)
+<!--Laat data zien van een festival uit de database waarvan je de naam ziet en als je op de naam klikt word je geredirect naar het gekozen festival-->
+@if (Model != null)
+{
+    foreach (Festival festival in Model)
     {
-        foreach (Festival festival in Model)
-        {
 
-<div class="box-agenda">
-    
-    <a href="/festival/@festival.Id">@festival.Naam </a>
+        <div class="box-agenda">
 
-</div>
+            <a href="/festival/@festival.Id">@festival.Naam </a>
+
+        </div>
 
 
 
 
 
-        }
     }
+}
 
 

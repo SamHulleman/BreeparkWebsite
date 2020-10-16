@@ -1,5 +1,6 @@
 ﻿using System;
 
+// haal juiste data op van database voor een specifiek festival
 namespace SchoolTemplate.Database
 {
     public class Festival

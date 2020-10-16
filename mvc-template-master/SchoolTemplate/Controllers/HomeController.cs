@@ -51,7 +51,7 @@ namespace SchoolTemplate.Controllers
             return View();
 
         }
-        //als het contactformulier goed is ingevuld volgens de requirements dan wordt je naar gelukt gestuurd
+        //als het contactformulier goed is ingevuld volgens de requirements dan word je naar gelukt gestuurd
         [Route("Contact")]
         [HttpPost]
         public IActionResult Contact(PersonModel model)
@@ -90,7 +90,7 @@ namespace SchoolTemplate.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }    
-        //een lijst van de festivalls die er zijn die in agenda worden getoond uit de database
+        //een lijst van de festivals die er zijn die in agenda worden getoond uit de database
         private List<Festival> GetFestivals()
         {
 
@@ -123,7 +123,7 @@ namespace SchoolTemplate.Controllers
             return festivals;
         }
 
-        //zet data neer van de database festival
+        //zet data neer van de database voor een festival
         private Festival GetFestival(string id)
         {
             List<Festival> festivals = new List<Festival>();
