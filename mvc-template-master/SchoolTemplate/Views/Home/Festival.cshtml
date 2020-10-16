@@ -8,7 +8,7 @@
 <h1>@Model.Naam</h1>
 <div class="column-festival">
     <div class="festival-img">
-
+        <!--haal afbeelding op uit de database en wordt vervolgens neergezet op de festivalpagina-->
         <img class="festival-fotos" src="@Model.Afbeelding" />
     </div>
 
@@ -16,13 +16,13 @@
         <div class=" festival-beschrijving"
                   </div>
 
-        <!--haal data op van database en wordt vervolgens neergezet-->
+        <!--haal data op uit database en wordt vervolgens neergezet op de festivalpagina-->
         @foreach (FestivalDag f in festivalDagen)
         {
-        <h2>@f.Datum.ToString("D") <br /> @f.Start- @f.Eind</h2>
-        <h4>@Model.Beschrijving <br /> Prijs: €  @Model.Prijs per stuk.</h4>
+            <h2>@f.Datum.ToString("D") <br /> @f.Start- @f.Eind</h2>
+            <h4>@Model.Beschrijving <br /> Prijs: €  @Model.Prijs per stuk.</h4>
 
-   
+
 
         }
     </div>

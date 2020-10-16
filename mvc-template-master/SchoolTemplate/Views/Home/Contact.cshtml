@@ -11,7 +11,7 @@
 }
 
 
-
+<!-- blokje met Contactgegevens-->
 <div class="contact-pagina">
     <h2 id="h2centerform">Contactgegevens</h2>
     <hr />
@@ -23,10 +23,10 @@
 
 
 <div class="contact-pagina">
-  
-        <h2 id="h2centerform">Contactformulier</h2>
+
+    <h2 id="h2centerform">Contactformulier</h2>
     <hr />
-    <!-- formulier wordt verstuurd naar database en als de invoer niet goed is wordt het met eigen gemaakt error message weer gegeven-->
+    <!-- formulier wordt verstuurd naar database en als de invoer niet goed is wordt het met zelfgemaakte error messages weergegeven-->
     <form text- method="post">
         <input type="text" name="Voornaam" placeholder="Voornaam" /> <br />
         @Html.ValidationMessageFor(m => m.Voornaam) <br />
@@ -41,6 +41,7 @@
 
 </div>
 
+<!-- blokjes met social media accounts-->
 <div class=" column-box">
     <div class="box">
         <h4> Instagram </h4>
