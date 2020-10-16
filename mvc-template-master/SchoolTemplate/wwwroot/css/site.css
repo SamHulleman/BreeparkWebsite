@@ -9,6 +9,7 @@ nav ul {
     overflow: hidden;
     background-color: #40E0D0;
     height: 80px;
+    border: 1px;
     border-style: solid;
     border-color: black;
 }
@@ -62,6 +63,7 @@ h5 {
     text-align: center;
     font-size: 30px;
     background-color: #40E0D0;
+    border: 1px;
     border-style: solid;
     border-color: black;
 }
@@ -86,8 +88,6 @@ p {
     float: left;
     width: 120px;
     height: 80px;
-    border-style: solid;
-    border-color: black;
 }
 
 .maps {
@@ -96,6 +96,7 @@ p {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    border: 1px;
     border-style: solid;
     border-color: black;
     margin-bottom: 20px;
@@ -132,6 +133,7 @@ p {
     height: 80px;
     width: 20vw;
     background-color: #40E0D0;
+    border: 1px;
     border-style: solid;
     border-color: black;
     text-align: center;
@@ -146,6 +148,7 @@ p {
     background-color: #40E0D0;
     text-align: left;
     margin-top: 25px;
+    border: 1px;
     border-style: solid;
     border-color: black;
     margin-bottom: 20px;

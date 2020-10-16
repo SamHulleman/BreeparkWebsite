@@ -11,8 +11,8 @@ namespace SchoolTemplate.Controllers
     public class HomeController : Controller
     {
         //database connectie
-        // string connectionString = "Server=172.16.160.21;Port=3306;Database=109807;Uid=109807;Pwd=rfultyRa;";
-        string connectionString = "Server=informatica.st-maartenscollege.nl;Port=3306;Database=109807;Uid=109807;Pwd=rfultyRa;";
+        string connectionString = "Server=172.16.160.21;Port=3306;Database=109807;Uid=109807;Pwd=rfultyRa;";
+        // string connectionString = "Server=informatica.st-maartenscollege.nl;Port=3306;Database=109807;Uid=109807;Pwd=rfultyRa;";
          
 
         //homescreen: dit zorgt ervoor dat je begint op de homescreen
